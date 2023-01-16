@@ -115,10 +115,8 @@ document.addEventListener("DOMContentLoaded", function () {
     email.innerHTML = `${restoredUser.email}`;
 })
 
-let itemNumber = 5;
-
 json.orders.map((order, number) => {
-    if (number <= itemNumber - 1) {
+    if (number <= 4) {
         list.innerHTML += `
             <div class='listItem'>
             <div class='item_id'>${order.id}</div>
@@ -129,30 +127,23 @@ json.orders.map((order, number) => {
     }
 });
 
-// for (let order of json.orders) {
-//     if (order.id <= 5) {
-//         list.innerHTML += `
-//             <div class='listItem'>
-//             <div class='item_id'>${order.id}</div>
-//             <div class='item_email'>${order.email}</div>
-//             <div class='item_amount'>${order.amount}</div>
-//             <div class='item_date'>${order.date}</div>
-//             </div>`
-//     }
-// }
+showMoreButton.addEventListener('click', function () {
+    let start;
+    let end;
+    let range = 5;
+    for (i = 1; i < (json.orders / 5); i++) {
+        start = range * (i - 1);
+        end = (range * i);
 
-const showMore = () => {
-    // let listItem = document.querySelector('.listItem');
-    json.orders.map((order, number) => {
-        if (number <= itemNumber * 2) {
-            list.innerHTML += `
-                <div class='listItem'>
-                <div class='item_id'>${order.id}</div>
-                <div class='item_email'>${order.email}</div>
-                <div class='item_amount'>${order.amount}</div>
-                <div class='item_date'>${order.date}</div>
-                </div>`
-        }
-    });
+    }
 
-}
+    console.log(json.orders.slice(start, end))
+    //             list.innerHTML += `
+    //                 <div class='listItem'>
+    //                 <div class='item_id'>${order.id}</div>
+    //                 <div class='item_email'>${order.email}</div>
+    //                 <div class='item_amount'>${order.amount}</div>
+    //                 <div class='item_date'>${order.date}</div>
+    //                 </div>`
+    // array.slice(start, end)
+})
