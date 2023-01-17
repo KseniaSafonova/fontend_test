@@ -169,7 +169,7 @@ body {
   line-height: 17px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   color: #595959;
   margin-left: 416px;
   margin-top: 27px;
@@ -270,16 +270,40 @@ body {
   display: none;
   position: absolute;
 }
-.optionsSort div {
+.optionsSort button {
+  width: 224px;
   height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #595959;
 }
-.optionsSort div:hover {
+.optionsSort button:hover {
   color: #F7F5F5;
   background-color: #595959;
+}
+
+.table__sort-amount {
+  display: none;
+  width: 224px;
+  height: 32px;
+  background: #F7F5F5;
+  border: 1px solid #ECEAEA;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #595959;
+  margin-left: 416px;
+  margin-top: 27px;
+}
+.table__sort-amount img {
+  margin-left: 60px;
 }
 
 @media (min-width: 375px) and (max-width: 767px) {

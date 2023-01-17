@@ -24,10 +24,14 @@
                 <div class="table__title">Заказы</div>
                 <div>
                     <button class="table__sort" onclick="showOptions()">По номеру заказа
+                        <img src="arrow.svg" alt="">
+                    </button>
+                    <button class="table__sort-amount" onclick="showOptions()">По сумме
+                        <img src="arrow.svg" alt="">
                     </button>
                     <div class="optionsSort">
-                        <div id="option__amount" onclick="amountSort()" tabindex="1">По сумме</div>
-                        <div id="option__date">По дате</div>
+                        <button id="option__amount" onclick="amountSort()">По сумме</button>
+                        <button id="option__date">По дате</button>
                     </div>
                 </div>
             </div>

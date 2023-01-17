@@ -155,6 +155,13 @@ const showOptions = () => {
 }
 
 const amountSort = () => {
+
+    let table__sort = document.querySelector('.table__sort');
+    table__sort.style.display = 'none';
+
+    let table__sortAmount = document.querySelector('.table__sort-amount');
+    table__sortAmount.style.display = 'block';
+
     list.innerHTML = '';
 
     json.orders.sort((a, b) => a.amount > b.amount ? 1 : -1);
