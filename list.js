@@ -134,12 +134,16 @@ const showMore = () => {
     range += index;
     for (index; index < range && index < json.orders.length; index++) {
         list.innerHTML += `
-                    <div class='listItem'>
-                    <div class='listItem__id'>${json.orders[index].id}</div>
-                    <div class='listItem__email'>${json.orders[index].email}</div>
-                    <div class='listItem__amount'>${json.orders[index].amount}</div>
-                    <div class='listItem__date'>${json.orders[index].date}</div>
-                    </div>`
+                <div class='listItem'>
+                <div class='listItem__id'>${json.orders[index].id}</div>
+                <div class='listItem__email'>${json.orders[index].email}</div>
+                <div class='listItem__amount'>${json.orders[index].amount}</div>
+                <div class='listItem__date'>${json.orders[index].date}</div>
+                </div>`
     };
 }
 
+exitButton.addEventListener('click', function () {
+    localStorage.clear();
+    document.location.href = "form.html";
+})

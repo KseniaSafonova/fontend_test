@@ -28,6 +28,8 @@ body {
   outline: none;
   text-indent: 22px;
   box-sizing: border-box;
+  font-weight: 700;
+  font-size: 24px;
 }
 .form input::-moz-placeholder {
   font-weight: 700;
@@ -59,6 +61,10 @@ body {
   color: #FFFFFF;
   margin-top: 20px;
   margin-left: 20px;
+}
+.form__button:hover {
+  background-color: white;
+  color: #86CD89;
 }
 .form__link {
   font-weight: 500;
@@ -128,6 +134,7 @@ body {
 .header__button:hover {
   color: #F7F5F5;
   background-color: #595959;
+  border: 2px solid #595959;
 }
 
 .table {
