@@ -10,29 +10,31 @@
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__avatar"></div>
-        <div>
-            <div class="header__user"></div>
-            <div class="header__email"></div>
-        </div>
-        <button class="header__button">Выход</button>
-    </header>
-    <section class="table">
-        <div class="table__topBlock">
-            <div class="table__title">Заказы</div>
-            <button class="table__sort">По номеру заказа
-            </button>
-        </div>
-        <div class="table__header">
-            <div class="table__header-number">Номер заказа</div>
-            <div class="table__header-email">Email</div>
-            <div class="table__header-amount">Сумма</div>
-            <div class="table__header-date">Дата</div>
-        </div>
-        <div class="list"></div>
-        <button class="showMore" id="showMoreButton">Показать еще...</button>
-    </section>
+    <div>
+        <header class="header">
+            <div class="header__avatar"></div>
+            <div>
+                <div class="header__user"></div>
+                <div class="header__email"></div>
+            </div>
+            <button class="header__button">Выход</button>
+        </header>
+        <section class="table">
+            <div class="table__topBlock">
+                <div class="table__title">Заказы</div>
+                <button class="table__sort">По номеру заказа
+                </button>
+            </div>
+            <div class="table__header">
+                <div class="table__header-number">Номер заказа</div>
+                <div class="table__header-email">Email</div>
+                <div class="table__header-amount">Сумма</div>
+                <div class="table__header-date">Дата</div>
+            </div>
+            <div class="list"></div>
+            <button class="showMore" onclick="showMore()">Показать еще...</button>
+        </section>
+    </div>
     <script src="list.js"></script>
 </body>
 

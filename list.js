@@ -119,31 +119,27 @@ json.orders.map((order, number) => {
     if (number <= 4) {
         list.innerHTML += `
             <div class='listItem'>
-            <div class='item_id'>${order.id}</div>
-            <div class='item_email'>${order.email}</div>
-            <div class='item_amount'>${order.amount}</div>
-            <div class='item_date'>${order.date}</div>
+            <div class='listItem__id'>${order.id}</div>
+            <div class='listItem__email'>${order.email}</div>
+            <div class='listItem__amount'>${order.amount}</div>
+            <div class='listItem__date'>${order.date}</div>
             </div>`
     }
 });
 
-showMoreButton.addEventListener('click', function () {
-    let start;
-    let end;
-    let range = 5;
-    for (i = 1; i < (json.orders / 5); i++) {
-        start = range * (i - 1);
-        end = (range * i);
+let index = 5;
+let range = 5;
 
-    }
+const showMore = () => {
+    range += index;
+    for (index; index < range && index < json.orders.length; index++) {
+        list.innerHTML += `
+                    <div class='listItem'>
+                    <div class='listItem__id'>${json.orders[index].id}</div>
+                    <div class='listItem__email'>${json.orders[index].email}</div>
+                    <div class='listItem__amount'>${json.orders[index].amount}</div>
+                    <div class='listItem__date'>${json.orders[index].date}</div>
+                    </div>`
+    };
+}
 
-    console.log(json.orders.slice(start, end))
-    //             list.innerHTML += `
-    //                 <div class='listItem'>
-    //                 <div class='item_id'>${order.id}</div>
-    //                 <div class='item_email'>${order.email}</div>
-    //                 <div class='item_amount'>${order.amount}</div>
-    //                 <div class='item_date'>${order.date}</div>
-    //                 </div>`
-    // array.slice(start, end)
-})

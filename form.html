@@ -6,16 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <div class="form">
-        <input type="email" placeholder="Email" class="email">
-        <input type="password" placeholder="Password" class="password">
-        <button onclick="logIn()">Войти</button>
-        <a href="">Забыли пароль?</a>
+    <div>
+        <div class="form">
+            <input type="email" placeholder="Email" class="form__email">
+            <input type="password" placeholder="Password" class="form__password">
+            <button onclick="logIn()" class="form__button">Войти</button>
+            <div class="form__link"><a href="">Забыли пароль?</a></div>
+        </div>
+        <div class="form__error"></div>
     </div>
-    <div class="error"></div>
     <script src="form.js"></script>
 </body>
 
