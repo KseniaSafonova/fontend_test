@@ -68,7 +68,8 @@ body {
         font-size: 20px;
         line-height: 24px;
         margin-top: 20px;
-        margin-left: 141px;
+        display: flex;
+        justify-content: center;
 
         a {
             color: #A2A3A7;
@@ -254,6 +255,11 @@ body {
     }
 }
 
+.buttonBlock {
+    display: flex;
+    justify-content: center;
+}
+
 .showMore {
     width: 254px;
     height: 42px;
@@ -264,11 +270,113 @@ body {
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
-    margin-left: 280px;
     margin-top: 20px;
 
     &:hover {
         color: #F7F5F5;
         background-color: $buttonTextColor;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .form {
+        width: 350px;
+        height: 316px;
+
+        input {
+            width: 300px;
+            height: 64px;
+        }
+
+        &__button {
+            width: 300px;
+        }
+
+        &__error {
+            font-size: 16px;
+        }
+    }
+
+
+    .header {
+        width: 90vw;
+        display: flex;
+        justify-content: space-around;
+
+        &__avatar {
+            display: none;
+        }
+
+        &__button {
+            margin-left: 0;
+        }
+    }
+
+    .table {
+        width: 90vw;
+        height: 437px;
+
+        &__topBlock {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        &__title {
+            font-size: 24px;
+            margin-left: 0;
+        }
+
+        &__sort {
+            width: 150px;
+            font-size: 14px;
+            margin-left: 0;
+        }
+
+        &__header {
+            width: 90%;
+            height: 37px;
+            justify-content: space-around;
+
+            &-number {
+                margin-left: 0px;
+            }
+
+            &-email {
+                margin-left: 0px;
+            }
+
+            &-amount {
+                margin-left: 0px;
+            }
+
+            &-date {
+                margin-left: 0px;
+            }
+        }
+    }
+
+    .listItem {
+        width: 90%;
+        font-size: 12px;
+        justify-content: space-around;
+
+        &__id {
+            width: 100px;
+        }
+
+        &__email {
+            text-align: center;
+        }
+
+        &__amount {
+            width: 104px;
+            padding-left: 10px;
+        }
     }
 }

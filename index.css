@@ -71,7 +71,8 @@ body {
   font-size: 20px;
   line-height: 24px;
   margin-top: 20px;
-  margin-left: 141px;
+  display: flex;
+  justify-content: center;
 }
 .form__link a {
   color: #A2A3A7;
@@ -233,6 +234,11 @@ body {
   width: 104px;
 }
 
+.buttonBlock {
+  display: flex;
+  justify-content: center;
+}
+
 .showMore {
   width: 254px;
   height: 42px;
@@ -243,10 +249,90 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 19px;
-  margin-left: 280px;
   margin-top: 20px;
 }
 .showMore:hover {
   color: #F7F5F5;
   background-color: #595959;
+}
+
+@media (min-width: 375px) and (max-width: 767px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+  .form {
+    width: 350px;
+    height: 316px;
+  }
+  .form input {
+    width: 300px;
+    height: 64px;
+  }
+  .form__button {
+    width: 300px;
+  }
+  .form__error {
+    font-size: 16px;
+  }
+  .header {
+    width: 90vw;
+    display: flex;
+    justify-content: space-around;
+  }
+  .header__avatar {
+    display: none;
+  }
+  .header__button {
+    margin-left: 0;
+  }
+  .table {
+    width: 90vw;
+    height: 437px;
+  }
+  .table__topBlock {
+    display: flex;
+    justify-content: space-around;
+  }
+  .table__title {
+    font-size: 24px;
+    margin-left: 0;
+  }
+  .table__sort {
+    width: 150px;
+    font-size: 14px;
+    margin-left: 0;
+  }
+  .table__header {
+    width: 90%;
+    height: 37px;
+    justify-content: space-around;
+  }
+  .table__header-number {
+    margin-left: 0px;
+  }
+  .table__header-email {
+    margin-left: 0px;
+  }
+  .table__header-amount {
+    margin-left: 0px;
+  }
+  .table__header-date {
+    margin-left: 0px;
+  }
+  .listItem {
+    width: 90%;
+    font-size: 12px;
+    justify-content: space-around;
+  }
+  .listItem__id {
+    width: 100px;
+  }
+  .listItem__email {
+    text-align: center;
+  }
+  .listItem__amount {
+    width: 104px;
+    padding-left: 10px;
+  }
 }/*# sourceMappingURL=index.css.map */
