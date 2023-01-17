@@ -278,6 +278,36 @@ body {
     }
 }
 
+.optionsSort {
+    width: 224px;
+    height: 64px;
+    background: #F7F5F5;
+    border: 1px solid #ECEAEA;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    color: $buttonTextColor;
+    margin-left: 416px;
+    display: none;
+    position: absolute;
+
+    div {
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+
+        &:hover {
+            color: #F7F5F5;
+            background-color: $buttonTextColor;
+        }
+    }
+}
+
+// mobile
+
 @media (min-width: 375px) and (max-width: 767px) {
 
     body {
@@ -378,5 +408,10 @@ body {
             width: 104px;
             padding-left: 10px;
         }
+    }
+
+    .optionsSort {
+        width: 150px;
+        margin-left: 0;
     }
 }

@@ -134,12 +134,12 @@ const showMore = () => {
     range += index;
     for (index; index < range && index < json.orders.length; index++) {
         list.innerHTML += `
-                <div class='listItem'>
-                <div class='listItem__id'>${json.orders[index].id}</div>
-                <div class='listItem__email'>${json.orders[index].email}</div>
-                <div class='listItem__amount'>${json.orders[index].amount}</div>
-                <div class='listItem__date'>${json.orders[index].date}</div>
-                </div>`
+            <div class='listItem'>
+            <div class='listItem__id'>${json.orders[index].id}</div>
+            <div class='listItem__email'>${json.orders[index].email}</div>
+            <div class='listItem__amount'>${json.orders[index].amount}</div>
+            <div class='listItem__date'>${json.orders[index].date}</div>
+            </div>`
     };
 }
 
@@ -147,3 +147,30 @@ exitButton.addEventListener('click', function () {
     localStorage.clear();
     document.location.href = "form.html";
 })
+
+let optionsSort = document.querySelector('.optionsSort');
+
+const showOptions = () => {
+    optionsSort.style.display = 'block';
+}
+
+const amountSort = () => {
+    list.innerHTML = '';
+
+    json.orders.sort((a, b) => a.amount > b.amount ? 1 : -1);
+    json.orders.map((order, number) => {
+        if (number <= 4) {
+            list.innerHTML += `
+                <div class='listItem'>
+                <div class='listItem__id'>${order.id}</div>
+                <div class='listItem__email'>${order.email}</div>
+                <div class='listItem__amount'>${order.amount}</div>
+                <div class='listItem__date'>${order.date}</div>
+                </div>`
+        }
+    });
+    console.log(json.orders)
+    optionsSort.style.display = 'none';
+    range = 5;
+    index = 5
+}

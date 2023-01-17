@@ -256,6 +256,32 @@ body {
   background-color: #595959;
 }
 
+.optionsSort {
+  width: 224px;
+  height: 64px;
+  background: #F7F5F5;
+  border: 1px solid #ECEAEA;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #595959;
+  margin-left: 416px;
+  display: none;
+  position: absolute;
+}
+.optionsSort div {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+.optionsSort div:hover {
+  color: #F7F5F5;
+  background-color: #595959;
+}
+
 @media (min-width: 375px) and (max-width: 767px) {
   body {
     width: 100vw;
@@ -334,5 +360,9 @@ body {
   .listItem__amount {
     width: 104px;
     padding-left: 10px;
+  }
+  .optionsSort {
+    width: 150px;
+    margin-left: 0;
   }
 }/*# sourceMappingURL=index.css.map */
